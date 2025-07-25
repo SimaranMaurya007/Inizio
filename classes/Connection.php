@@ -17,7 +17,6 @@ class Connection {
             if (!getenv('DB_HOST')) {
                 $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
                 $dotenv->load();
-                echo 'Dotenv loaded<br>';
             }
             $host = $_ENV['DB_HOST'];
             $database = $_ENV['DB_DATABASE'];
