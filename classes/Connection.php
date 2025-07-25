@@ -9,9 +9,9 @@ class Connection {
     
     public static function getInstance() {
         // Check if .env file exists
-        if (!file_exists(__DIR__ . '/../.env')) {
-            die('.env file not found');
-        }
+        // if (!file_exists(__DIR__ . '/../.env')) {
+        //     die('.env file not found');
+        // }
         if (Connection::$connect === NULL) {
             // Load environment variables from .env if not already loaded
             if (!getenv('DB_HOST')) {
