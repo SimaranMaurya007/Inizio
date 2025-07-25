@@ -1,0 +1,20 @@
+# System files
+Thumbs.db
+.DS_Store
+
+# Environment/config
+.env
+
+# Database dumps/backups
+/database/
+*.sql
+
+# IDE/project files
+.vscode/
+.idea/
+
+# Node modules (if any JS tooling is added)
+node_modules/
+
+# Composer vendor directory (if you use Composer)
+vendor/ 
