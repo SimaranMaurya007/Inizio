@@ -3,10 +3,10 @@
 A modern web application to organize, manage, and promote events with ease. This system streamlines event creation, attendee registration, sponsor management, and more—ideal for conferences, workshops, social gatherings, and public events.
 
 ---
-
+ 
 ## 🚀 Live Demo
 
-🌐 **Try the Website Live!** [visit website](https://inizio-dsqw.onrender.com/)
+👉  [Click here to try the live web version](https://inizio-dsqw.onrender.com/)
 ---
 
 ## 🖼️ Screenshots
