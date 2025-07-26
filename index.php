@@ -1,3 +1,7 @@
+<?php
+require_once 'utils/functions.php';
+start_session();
+?>
 <!DOCTYPE html>
 <html>
 
