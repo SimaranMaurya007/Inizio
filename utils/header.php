@@ -27,7 +27,7 @@ if (!isset($showHeroSection)) {
                     echo '<li><a href = "index.php">Home</a></li>';
                     echo '<li><a href = "events_public.php">Events</a></li>';
                     echo '<li><a href = "locations.php">Locations</a></li>';
-                    echo '<li><a href = "viewSponsor.php">Sponsors</a></li>';
+                    echo '<li><a href = "sponsors2.php">Sponsors</a></li>';
                     echo '<li><a href = "contact.php">Contact Us</a></li>';
                     // User dropdown
                     echo '<li class="dropdown user-dropdown">';
@@ -57,7 +57,7 @@ if (!isset($showHeroSection)) {
                     echo '<li><a href = "index.php">Home</a></li>';
                     echo '<li><a href = "events_public.php">Events</a></li>';
                     echo '<li><a href = "locations2.php">Locations</a></li>';
-                    echo '<li><a href = "viewSponsor.php">Sponsors</a></li>';
+                    echo '<li><a href = "sponsors2.php">Sponsors</a></li>';
                     echo '<li><a href = "contact.php">Contact Us</a></li>';
                     echo '<button type = "button" class = "btn btn-default navbar-btn" data-toggle = "modal" data-target = "#login">Login <Span class="glyphicon glyphicon-log-in"></span></button>';
                 }
