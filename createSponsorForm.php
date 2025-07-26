@@ -1,4 +1,5 @@
 <?php
+require_once 'utils/session_init.php';
 require_once 'functions.php';
 
 if (!isset($formdata)) {

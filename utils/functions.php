@@ -6,8 +6,7 @@ function is_logged_in() {
 }
 
 function start_session() {
-    if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
+    // Use the standardized session initialization
+    require_once 'utils/session_init.php';
 }
 ?>

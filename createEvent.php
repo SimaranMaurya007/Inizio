@@ -1,10 +1,9 @@
 <?php
+require_once 'utils/session_init.php';
 require_once 'classes/Event.php';
 require_once 'classes/EventTableGateway.php';
 require_once 'classes/Connection.php';
 require_once 'validateEvents.php';
-
-session_start();
 
 $formdata = array();
 $errors = array();

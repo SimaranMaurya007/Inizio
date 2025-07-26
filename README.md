@@ -1,16 +1,69 @@
-Event Management System
+# Event Management System
 
-Welcome to the Event Management System repository! This system is designed to streamline the process of organizing, managing, and promoting a wide range of events, catering to various needs and preferences. Whether you're planning a professional conference, educational seminar, engaging workshop, lively social gathering, or any other event, this system provides the comprehensive tools and features necessary to ensure your event's success. 
+A modern web application to organize, manage, and promote events with ease. This system streamlines event creation, attendee registration, sponsor management, and more—ideal for conferences, workshops, social gatherings, and public events.
 
-In addition to facilitating traditional event management tasks such as scheduling, registration, and attendee management, our system goes a step further by addressing the needs of public events. We understand the importance of securing sponsors and reaching a broader audience for your program. Therefore, our platform offers seamless integration to help you easily connect with potential sponsors and attract a diverse audience to your events.
+---
 
-Key Features:
+## 🚀 Live Demo
+[View Deployed Website](https://inizio-dsqw.onrender.com/index.php) 
+---
 
-Comprehensive Event Management: From event creation to attendee registration and feedback collection, our system offers end-to-end event management capabilities.
+## 🖼️ Screenshots
 
-Public Event Support: Simplify the process of finding sponsors and promoting your public events to attract a larger audience.
+![Homepage](images/homepage1.png) 
+![](images/homepage2.png)
+![Event](images/eventpage.png)
+![Event Register](images/event_detail_and_register.png)
+![Location Page](images/locationpage.png)
+![Admin Dashboard](images/admin_dashboard.png)
 
-Nearby Events: Quickly discover and engage with ongoing events in your vicinity, allowing for greater participation and community involvement.
+---
 
-Whether you're an event organizer, sponsor, or attendee, our Event Management System aims to enhance your experience and maximize the success of every event. Join us in revolutionizing the way events are planned, managed, and enjoyed!
-You can find the SDS and SRS document uploaded above.
+## ✨ Features
+- **Event Management:** Create, edit, and delete events with detailed information.
+- **Attendee Registration:** Easy sign-up and management for event participants.
+- **Sponsor Integration:** Add and manage sponsors for public events.
+- **Location Management:** Organize events by location with full CRUD support.
+- **Download Attendees:** Export attendee lists for event management.
+- **User Roles:** Admin, Organizer, and User dashboards with role-based access.
+- **Public Event Display:** Browse and search events as a guest.
+- **User Authentication:** Secure login and registration for users.
+- **Responsive Design:** Clean, mobile-friendly interface using Bootstrap.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- PHP 7.4+
+- MySQL
+- Composer
+- Web server (e.g., XAMPP, Apache, mysql)
+
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/SimaranMaurya007/Inizio.git
+   cd eventManagementSystem
+   ```
+2. **Install dependencies:**
+   ```bash
+   composer install
+   ```
+3. **Set up the database:**
+   - Import the SQL files from the `sql/` directory into your MySQL server.
+   - Update database credentials in `classes/Connection.php` if needed.
+4. **Run the application:**
+   - Start your web server and navigate to the project directory in your browser (e.g., `http://localhost/eventManagementSystem`).
+
+---
+
+## 📦 Project Structure
+- `classes/` — PHP classes for events, locations, sponsors, users, and database access
+- `css/` & `js/` — Frontend assets (Bootstrap, custom styles, scripts)
+- `utils/` — Reusable UI components (header, footer, toolbar, etc.)
+- `sql/` — Database schema and sample data
+- `images/` — Event and sponsor images
+
+---
+

@@ -1,6 +1,6 @@
 <?php
+require_once 'utils/session_init.php';
 require_once 'classes/Connection.php';
-session_start();
 
 // Validate POST data
 $name = isset($_POST['Name']) ? trim($_POST['Name']) : '';

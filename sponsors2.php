@@ -201,7 +201,7 @@
                         <div class="row">
                             <div class="modal-body">
                                 <div class="col-md-6">
-                                    <img src="images/khalsa.jpg" class="img-responsive"><!-- Replace with Khalsa Cricket Academy logo -->
+                                    <img src="images/cricket.jpg" class="img-responsive"><!-- Replace with Khalsa Cricket Academy logo -->
                                 </div>
                                 <div class="modaltext1 col-md-6">
                                     <h4>Empowering Cricket Enthusiasts</h4>

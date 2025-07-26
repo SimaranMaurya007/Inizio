@@ -1,10 +1,9 @@
 <?php
+require_once 'utils/session_init.php';
 require_once 'classes/Location.php';
 require_once 'classes/LocationTableGateway.php';
 require_once 'classes/Connection.php';
 require_once 'validateLocation.php';
-
-session_start();
 
 $formdata = array();
 $errors = array();
