@@ -10,7 +10,8 @@ if (!isset($_GET['event_id'])) {
 $eventId = intval($_GET['event_id']);
 
 try {
-    $conn = DB::getConnection();
+    require_once 'classes/Connection.php';
+$conn = Connection::getInstance();
     $stmt = $conn->prepare('SELECT Title, Description, StartDate, EndDate FROM events WHERE EventID = ?');
     $stmt->execute([$eventId]);
     $event = $stmt->fetch(PDO::FETCH_ASSOC);

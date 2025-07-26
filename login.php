@@ -3,7 +3,7 @@ ob_start(); // Start output buffering to prevent "headers already sent" errors
 
 require_once 'utils/functions.php';
 require_once 'classes/User.php';
-require_once 'classes/DB.php';
+require_once 'classes/Connection.php';
 require_once 'classes/UserTable.php';
 
 start_session();
@@ -41,7 +41,7 @@ try {
 
         // create a UserTable object and use it to retrieve 
         // the users
-        $connection = DB::getConnection();
+        $connection = Connection::getInstance();
         $userTable = new UserTable($connection);
         $user = $userTable->getUserByUsername($username);
 

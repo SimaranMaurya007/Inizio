@@ -3,7 +3,8 @@ require_once 'classes/DB.php';
 
 // Fetch events from the database
 try {
-    $conn = DB::getConnection();
+    require_once 'classes/Connection.php';
+$conn = Connection::getInstance();
     $stmt = $conn->prepare('SELECT EventID, Title, Description, StartDate, EndDate, Cost, LocationID, image FROM events');
     $stmt->execute();
     $events = $stmt->fetchAll(PDO::FETCH_ASSOC);
