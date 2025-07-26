@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Start output buffering to prevent "headers already sent" errors
 require_once 'utils/functions.php';
 require_once 'classes/User.php';
 require_once 'classes/DB.php';
@@ -15,10 +16,10 @@ try {
     
     $input_method = INPUT_POST;
 
-    $formdata['username'] = filter_input($input_method, "username", FILTER_SANITIZE_STRING);
-    $formdata['password'] = filter_input($input_method, "password", FILTER_SANITIZE_STRING);
-    $formdata['cpassword'] = filter_input($input_method, "cpassword", FILTER_SANITIZE_STRING);
-    $formdata['role'] = filter_input($input_method, "role", FILTER_SANITIZE_STRING);
+    $formdata['username'] = htmlspecialchars($_POST['username'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['password'] = htmlspecialchars($_POST['password'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['cpassword'] = htmlspecialchars($_POST['cpassword'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['role'] = htmlspecialchars($_POST['role'] ?? '', ENT_QUOTES, 'UTF-8');
 
     // throw an exception if any of the form fields 
     // are empty
@@ -96,3 +97,4 @@ catch (Exception $ex) {
     require 'register_form.php';
 }
 ?>
+<?php ob_end_flush(); ?>

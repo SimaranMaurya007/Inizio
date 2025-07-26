@@ -37,5 +37,4 @@ class Sponsor {
     public function setManagerEmail($managerEmail) { $this->managerEmail = $managerEmail; }
     public function setPhoneNumber($phoneNumber) { $this->phoneNumber = $phoneNumber; }
     public function setImage($image) { $this->image = $image; }
-}
-?> 
+} 

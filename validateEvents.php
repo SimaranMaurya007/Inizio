@@ -1,10 +1,10 @@
 <?php
 
 function validateEvents($input_method, &$formdata, &$errors) {
-    $formdata['Title'] = filter_input($input_method, "Title", FILTER_SANITIZE_STRING);
-    $formdata['Description'] = filter_input($input_method, "Description", FILTER_SANITIZE_STRING);
-    $formdata['StartDate'] = filter_input($input_method, "StartDate", FILTER_SANITIZE_STRING);
-    $formdata['EndDate'] = filter_input($input_method, "EndDate", FILTER_SANITIZE_STRING);
+    $formdata['Title'] = htmlspecialchars($_POST['Title'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['Description'] = htmlspecialchars($_POST['Description'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['StartDate'] = htmlspecialchars($_POST['StartDate'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['EndDate'] = htmlspecialchars($_POST['EndDate'] ?? '', ENT_QUOTES, 'UTF-8');
     $formdata['Cost'] = filter_input($input_method, "Cost", FILTER_SANITIZE_NUMBER_INT);
     $formdata['LocID'] = filter_input($input_method, "LocID", FILTER_SANITIZE_NUMBER_INT);
 

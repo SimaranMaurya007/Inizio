@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Start output buffering to prevent "headers already sent" errors
 require_once 'utils/functions.php';
 require_once 'classes/Connection.php';
 require_once 'classes/EventTableGateway.php';
@@ -54,4 +55,5 @@ $eventGateway = new EventTableGateway($connection);
 </div>
 <?php require 'utils/footer.php'; ?>
 </body>
-</html> 
+</html>
+<?php ob_end_flush(); ?> 

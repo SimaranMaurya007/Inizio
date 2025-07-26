@@ -89,5 +89,4 @@ class SponsorTableGateway {
             die("Could not delete sponsor");
         }
     }
-}
-?> 
+} 

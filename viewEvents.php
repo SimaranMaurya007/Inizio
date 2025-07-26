@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Start output buffering to prevent "headers already sent" errors
 require_once 'utils/functions.php';
 require_once 'classes/User.php';
 require_once 'classes/Event.php';
@@ -121,3 +122,4 @@ if ($role === 'organizer') {
        
     </body>
 </html>
+<?php ob_end_flush(); ?>

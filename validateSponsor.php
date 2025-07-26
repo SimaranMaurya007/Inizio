@@ -1,9 +1,9 @@
 <?php
 function validateSponsor($input_method, &$formdata, &$errors) {
-    $formdata['Name'] = filter_input($input_method, "Name", FILTER_SANITIZE_STRING);
-    $formdata['Address'] = filter_input($input_method, "Address", FILTER_SANITIZE_STRING);
-    $formdata['ManagerFName'] = filter_input($input_method, "ManagerFName", FILTER_SANITIZE_STRING);
-    $formdata['ManagerLName'] = filter_input($input_method, "ManagerLName", FILTER_SANITIZE_STRING);
+    $formdata['Name'] = htmlspecialchars($_POST['Name'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['Address'] = htmlspecialchars($_POST['Address'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['ManagerFName'] = htmlspecialchars($_POST['ManagerFName'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['ManagerLName'] = htmlspecialchars($_POST['ManagerLName'] ?? '', ENT_QUOTES, 'UTF-8');
     $formdata['ManagerEmail'] = filter_input($input_method, "ManagerEmail", FILTER_SANITIZE_EMAIL);
     $formdata['PhoneNumber'] = filter_input($input_method, "PhoneNumber", FILTER_SANITIZE_NUMBER_INT);
 

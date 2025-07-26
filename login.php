@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Start output buffering to prevent "headers already sent" errors
 
 require_once 'utils/functions.php';
 require_once 'classes/User.php';
@@ -16,8 +17,8 @@ try {
     
     $input_method = INPUT_POST;
 
-    $formdata['username'] = filter_input($input_method, "username", FILTER_SANITIZE_STRING);
-    $formdata['password'] = filter_input($input_method, "password", FILTER_SANITIZE_STRING);
+    $formdata['username'] = htmlspecialchars($_POST['username'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['password'] = htmlspecialchars($_POST['password'] ?? '', ENT_QUOTES, 'UTF-8');
     
     // throw an exception if any of the form fields 
     // are empty
@@ -85,3 +86,4 @@ try {
         require 'login_form.php';
     }
     ?>
+<?php ob_end_flush(); ?>

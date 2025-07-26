@@ -1,4 +1,7 @@
 <?php
+// Include session initialization first
+require_once 'utils/session_init.php';
+
 require_once 'utils/functions.php';
 require_once 'classes/Sponsor.php';
 require_once 'classes/SponsorTableGateway.php';
@@ -7,8 +10,7 @@ require_once 'classes/Connection.php';
 $connection = Connection::getInstance();
 $gateway = new SponsorTableGateway($connection);
 
-start_session();
-
+// Check if user is logged in
 if (!is_logged_in()) {
     header("Location: login_form.php");
     exit(); // Add exit() after redirection to stop further execution
@@ -114,7 +116,8 @@ if (!empty($searchName)) {
         </div>
         <?php require 'utils/footer.php'; ?>
     </div>
-
+    <?php require 'utils/scripts.php'; ?>
 </body>
 </html>
+<?php ob_end_flush(); ?>
 

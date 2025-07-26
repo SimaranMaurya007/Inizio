@@ -1,4 +1,7 @@
 <?php
+// Include session initialization first
+require_once 'utils/session_init.php';
+
 require_once 'classes/Event.php';
 require_once 'classes/EventTableGateway.php';
 require_once 'classes/Connection.php';
@@ -59,9 +62,6 @@ if (!$row) {
                         echo '<td>' . $row['EndDate'] . '</td>';
                         echo '<td>' . $row['Cost'] . '</td>';
                         echo '<td>' . $row['LocationID'] . '</td>';
-                        if (session_status() === PHP_SESSION_NONE) {
-                            session_start();
-                        }
                         $user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
                         $canDelete = false;
                         if (

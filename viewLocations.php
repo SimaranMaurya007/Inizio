@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Start output buffering to prevent "headers already sent" errors
 require_once 'utils/functions.php';
 require_once 'classes/User.php';
 require_once 'classes/Location.php';
@@ -115,3 +116,4 @@ if (!empty($searchName)) {
         
     </body>
 </html>
+<?php ob_end_flush(); ?>

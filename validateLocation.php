@@ -1,15 +1,15 @@
 <?php
 
 function validateLocation($input_method, &$formdata, &$errors) {
-    $formdata['Name'] = filter_input($input_method, "Name", FILTER_SANITIZE_STRING);
-    $formdata['Address'] = filter_input($input_method, "Address", FILTER_SANITIZE_STRING);
-    $formdata['managerFName'] = filter_input($input_method, "managerFName", FILTER_SANITIZE_STRING);
-    $formdata['managerLName'] = filter_input($input_method, "managerLName", FILTER_SANITIZE_STRING);
+    $formdata['Name'] = htmlspecialchars($_POST['Name'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['Address'] = htmlspecialchars($_POST['Address'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['managerFName'] = htmlspecialchars($_POST['managerFName'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['managerLName'] = htmlspecialchars($_POST['managerLName'] ?? '', ENT_QUOTES, 'UTF-8');
     $formdata['managerEmail'] = filter_input($input_method, "managerEmail", FILTER_SANITIZE_EMAIL);
     $formdata['managerNumber'] = filter_input($input_method, "managerNumber", FILTER_SANITIZE_NUMBER_INT);
     $formdata['maxCap'] = filter_input($input_method, "maxCap", FILTER_SANITIZE_NUMBER_INT);
-    $formdata['lType'] = filter_input($input_method, "lType", FILTER_SANITIZE_STRING);
-    $formdata['facilities'] = filter_input($input_method, "facilities", FILTER_SANITIZE_STRING, FILTER_REQUIRE_ARRAY);
+    $formdata['lType'] = htmlspecialchars($_POST['lType'] ?? '', ENT_QUOTES, 'UTF-8');
+    $formdata['facilities'] = htmlspecialchars($_POST['facilities'] ?? '', ENT_QUOTES, 'UTF-8');
     $formdata['link'] = filter_input($input_method, "link", FILTER_SANITIZE_URL);
 
     if ($formdata['Name'] === NULL ||

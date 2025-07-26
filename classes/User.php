@@ -21,4 +21,3 @@ class User {
     public function setPassword($p) { $this->password = $p; }
     public function setRole($r) { $this->role = $r; }
 }
-?>
