@@ -5,18 +5,28 @@ A modern web application to organize, manage, and promote events with ease. This
 ---
 
 ## 🚀 Live Demo
-[View Deployed Website](https://inizio-dsqw.onrender.com/index.php) 
+
+🌐 **Try the Website Live!** [visit website](https://inizio-dsqw.onrender.com/)
 ---
 
 ## 🖼️ Screenshots
 
-![Homepage](images/homepage1.png) 
-![](images/homepage2.png)
-![Event](images/eventpage.png)
-![Event Register](images/event_detail_and_register.png)
-![Location Page](images/locationpage.png)
-![Admin Dashboard](images/admin_dashboard.png)
+**Homepage**
+![Homepage](images/homepage1.png)
 
+![](images/homepage2.png)
+
+**Event Page**
+![Event](images/eventpage.png)
+
+**Event Register**
+![Event Register](images/event_detail_and_register.png)
+
+**Location Page**
+![Location Page](images/locationpage.png)
+
+**Admin Dashboard**
+![Admin Dashboard](images/admin_dashboard.png)
 ---
 
 ## ✨ Features
